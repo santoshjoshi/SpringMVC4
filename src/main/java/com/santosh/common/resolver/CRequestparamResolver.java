@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.mkyong.common.resolver;
+package com.santosh.common.resolver;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.util.StringUtils;

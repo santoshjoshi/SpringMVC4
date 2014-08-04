@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	TRACE="false">
+	<appender name="general-log" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="d:/logs/logs1/web.log" />
+		<!-- <param name="Append" value="true" /> -->
+		<!-- <param name="immediateFlush" value="true" /> -->
+		<!-- <param name="MaxBackupIndex" value="5" /> -->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}] %p %t %c - %m%n" />
+		</layout>
+	</appender>
+	 
+ 
+	<logger name="org.springframework.core" additivity="false">
+		<level value="TRACE" />
+		<appender-ref ref="general-log" />
+	</logger>
+ 
+	
+	<logger name= "org.springframework.web.servlet.view" additivity="false"> 
+        <level value="TRACE" />
+        <appender-ref ref="general-log" />
+    </logger>
+	
+ 
+ 
+
+	<logger
+		name="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"
+		additivity="false">
+		<level value="TRACE" />
+		<appender-ref ref="general-log" />
+	</logger>
+
+	 
+
+	 
+
+	<!-- ##################################START Of Logger for User Activity 
+		Personalization######################################### -->
+
+	 
+
+	<!-- ##################################END Of Logger for User Activity Personalization######################################### -->
+
+	<root>
+		<level value="TRACE" />
+		<appender-ref ref="general-log" />
+	</root>
+</log4j:configuration>

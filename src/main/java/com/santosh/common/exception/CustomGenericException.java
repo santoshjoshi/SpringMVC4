@@ -1,4 +1,4 @@
-package com.mkyong.common.exception;
+package com.santosh.common.exception;
 
 public class CustomGenericException extends RuntimeException {
 

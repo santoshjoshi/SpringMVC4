@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.mkyong.common.resolver;
+package com.santosh.common.resolver;
  
 
 import java.lang.reflect.Array;
